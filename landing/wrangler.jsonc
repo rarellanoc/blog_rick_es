@@ -1,7 +1,9 @@
 {
   "name": "blog-es",
-  "compatibility_date": "2025-04-01",
+  "main": "src/index.js",
+  "compatibility_date": "2025-01-01",
   "assets": {
-    "directory": "./output/"
+    "directory": "./output",
+    "binding": "ASSETS"
   }
 }
