@@ -1,5 +1,5 @@
 {
-  "name": "my-worker",
+  "name": "blog-es",
   "compatibility_date": "2025-04-01",
   "assets": {
     "directory": "./output/"
