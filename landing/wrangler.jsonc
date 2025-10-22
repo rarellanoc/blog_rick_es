@@ -1,8 +1,0 @@
-{
-  "name": "blog-es",
-  "compatibility_date": "2025-10-22",
-  
-  "assets": {
-    "directory": "./output"
-  }
-}
