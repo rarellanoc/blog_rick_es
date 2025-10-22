@@ -1,12 +1,14 @@
 AUTHOR = 'Rick Arellano'
-SITENAME = 'Rick Arellano - welcome'
+SITENAME = 'Rick Arellano - bienvenido'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'America/Santiago'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'es'
+
+OUTPUT_PATH = '/output'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
