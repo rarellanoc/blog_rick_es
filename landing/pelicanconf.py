@@ -7,6 +7,7 @@ PATH = 'content'
 TIMEZONE = 'America/Santiago'
 
 DEFAULT_LANG = 'es'
+LOCALE = 'es_ES'
 
 OUTPUT_PATH = '/output'
 

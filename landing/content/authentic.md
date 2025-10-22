@@ -1,3 +1,4 @@
-Title: Authentic this and that Date: 2025-05-25 12:27 Category: Blog 
+Title: Authentic this and that Date: 22 de Octubre 2025 12:27 Category: 
+Blog 
 
 A football match is a game...
