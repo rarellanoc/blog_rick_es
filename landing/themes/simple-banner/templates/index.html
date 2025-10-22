@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - Rick Arellano </title>
+    <style> body {padding: 0; margin: 0;} </style>
+
+	  
+
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f5f0;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            height: 100vh;
+            background: 
+url('https://via.placeholder.com/1920x1080?text=Hero+Image') no-repeat 
+center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #c9a96e;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #b08d57;
+        }
+
+        /* Navigation */
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px 0;
+            z-index: 2;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        .nav-menu a {
+            color: #fff;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover {
+            color: #c9a96e;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        #about {
+            background: #fff;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Books Section */
+        #books {
+            background: #f4f0eb;
+        }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .book-item {
+            background: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .book-item:hover {
+            transform: translateY(-10px);
+        }
+        .book-item img {
+            margin-bottom: 20px;
+        }
+        .book-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Blog Section */
+        #blog {
+            background: #fff;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .blog-item {
+            background: #f9f5f0;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .blog-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 20px;
+        }
+        .blog-content h3 {
+            margin-bottom: 10px;
+        }
+        .blog-content p {
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #f4f0eb;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        input, textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #c9a96e;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .nav-menu {
+                flex-direction: column;
+                background: rgba(0,0,0,0.8);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                display: none;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+	
+	<script async data-uid="53c2271d8d" src="https://the-social-game.kit.com/53c2271d8d/index.js"></script>
+     
+
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">Rick Arellano</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acercade">Acerca de</a></li>
+                <li><a href="#libros">Libros</a></li>
+                <li><a href="#blog">Blog</a></li>
+            
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header id="inicio">
+
+	   <div class="hero-content">
+            <h1>Rick Arellano</h1>
+            <p>Autor, guía de desarrollo personal</p>
+            <a href="#books" class="btn">Explora los Libros</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Aceeca del Autor</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img 
+src="theme/profile_rick.jpg" alt="Rick 
+Arellano">
+                </div>
+                <div class="about-text">
+<p>Rick Arellano esta ayudando a hombres a conocer más sobre el juego interno necesario para mejorar sus actividades sociales. </p>
+
+<p>Las historias de Rick han alcanzado cientos de lectores en Latinoamérica (Apple Books). Él ha estado en internet desde 2008, y ha sido galardonado por instituciones como Universidad del Bio-bio e INACAP. Publicado por Blucher Proceedings y Lulu Press. Actualmente vive y trabaja en un suburbio alrededor de Concepción, Chile. 
+
+rickarellano.work/
+</p>
+					
+					<a href="#blog" class="btn">Conocer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+ <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2>Lo último del blog Blog</h2>
+            <div class="blog-grid">
+
+{% for article in articles_page.object_list %}
+
+                <div class="blog-item">
+                    
+                    <div class="blog-content">
+                        <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+                        <p>{{ article.summary }}</p>
+                        <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+                    </div>
+                </div>
+                
+
+ {% endfor %}
+           
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="libros">
+        <div class="container">
+            <h2>La colección</h2>
+            <div class="books-grid">
+                <div class="book-item">
+                    <img 
+src="theme/tfg.png" alt="Book 1">
+                    <h3>Los fragmentos del juego</h3>
+                    <p>Una breve búsqueda por el declive de las comunidades de abordar</p>
+                    <a href="https://a.co/d/3Z72VYx" class="btn">Learn More</a>
+                </div>
+                <div class="book-item">
+                    <img 
+src="theme/abb.png" alt="Book 2">
+                    <h3>La búsqueda de lo auténtico</h3>
+                    <p>Un grupo del cono sur conoce el movimiento de authentic relating de San Francisco</p>
+                    <a href="https://a.co/d/68EpUj6" class="btn">Learn More</a>
+                </div>
+                <div class="book-item">
+                    <img 
+src="theme/wpa.png" alt="Book 3">
+                    <h3>Sin Prestar Atención</h3>
+                    <p>Cómo las galerías de arte se convierten en un sutil baile de seducción
+.</p>
+                    <a href="https://a.co/d/i57btWK" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rick Arellano. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@rickarellano.fragments">YouTube</a>
+                <a href="https://www.instagram.com/rickarellano.work/">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle (if needed)
+        const menu = document.querySelector('.nav-menu');
+        // For demo, assuming no burger icon; add if needed
+    </script>
+
+
+
+  </body>
+</html>
+
