@@ -1,7 +1,7 @@
 name = "blog-es"
 
 # ← ADD THIS LINE
-main = "src/index.js"
+main = "landing/src/index.js"
 
 compatibility_date = "2025-10-22"
 
