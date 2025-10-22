@@ -1,0 +1,10 @@
+name = "blog-es"
+
+# ← ADD THIS LINE
+main = "src/index.js"
+
+compatibility_date = "2025-10-22"
+
+[assets]
+directory = "./output"
+binding = "ASSETS"
