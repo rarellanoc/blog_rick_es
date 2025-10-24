@@ -160,13 +160,13 @@ de</a>
     <div class="container">
         <!-- Blog Post -->
         <div class="blog-post">
-            <div class="blog-meta">October 16, 2025 | Writing</div>
+            <div class="blog-meta"> 2025 | Blog </div>
 
 			<article>
             <h2><h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2></h2>
             <section><p></p>{{ article.content }}</p></section>
             <footer>
-                <p>Published: <time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></p>
+                <p>Publicado en: <time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></p>
                 <address>By
                     {% for author in article.authors %}
                         <a href="{{ SITEURL }}/#blog</a>
@@ -185,7 +185,7 @@ de</a>
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Rick Arellano. All Rights Reserved.</p>
+            <p>&copy; 2025 Rick Arellano. Todos los derechos reservados.</p>
             <div class="social-links">
                 <a href="https://www.youtube.com/@rickarellano.fragments">YouTube</a>
                 <a 
