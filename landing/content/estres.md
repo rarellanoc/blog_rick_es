@@ -2,9 +2,6 @@ Title: Una nueva perspectiva sobre el estrés
 Date: 25-10-2025
 Category: Blog
 
-
-# Una nueva perspectiva sobre el estrés
-
 Para muchos chicos, hablar con extraños genera un nivel de estrés, esa distancia a cubrir es demasiado alta, es demasiado. Y nos contraemos un poco, una reacción del cuerpo.
 
 El problema es: una vez que estás estresado, nada bueno puede salir. Así que nos enfocaremos primero en el disfrute, si estás haciendo eso, y el disfrute en la conversación es esencial. Creo que los mejores intentos para hablar con la gente son aquellos en los que una vez que tu vida va bien. Es mejor.
