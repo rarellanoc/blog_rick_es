@@ -420,16 +420,16 @@
   <section id="blog" class="bg-light">
     <div class="container narrow">
       <div class="eyebrow" style="text-align:center">From the Blog</div>
-      <h2 class="section-title">ESSAYS</h2>
+      <h2 class="section-title">ENSAYOS</h2>
       <div class="cards">
 
 	{% for article in articles_page.object_list %}
 		  
         <div class="card">
-          <div class="card-meta">Essays / Rick Arellano</div>
+          <div class="card-meta">Ensayos / Rick Arellano</div>
 		  <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
          <p>{{ article.summary }}</p>
-          <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+          <a href="{{ SITEURL }}/{{ article.url }}">Aprender más</a>
         </div>
 
 		  
