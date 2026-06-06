@@ -1,424 +1,604 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido - Rick Arellano </title>
-    <style> body {padding: 0; margin: 0;} </style>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rick Arellano — autor & coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-bg:       #f9f9f7;
+      --color-text:     #1a1a1a;
+      --color-muted:    #5c5c5c;
+      --color-border:   #e0ded8;
+      --color-accent:   #c1665a;
+      --color-primary:  #2e2e2e;
+      --color-primary-fg: #ffffff;
+      --max-width:      1150px;
+    }
 
-	  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f9f5f0;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      font-size: 17px;
+    }
 
-        /* Header */
-        header {
-            position: relative;
-            height: 100vh;
-            background: 
-url('https://via.placeholder.com/1920x1080?text=Hero+Image') no-repeat 
-center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
-        .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #c9a96e;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: #b08d57;
-        }
+    h1, h2, h3, .serif {
+      font-family: 'Crimson Text', Georgia, serif;
+      line-height: 1.15;
+    }
 
-        /* Navigation */
-        nav {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 20px 0;
-            z-index: 2;
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-        .nav-menu {
-            list-style: none;
-            display: flex;
-        }
-        .nav-menu li {
-            margin-left: 30px;
-        }
-        .nav-menu a {
-            color: #fff;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        .nav-menu a:hover {
-            color: #c9a96e;
-        }
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
 
-        /* Sections */
-        section {
-            padding: 80px 0;
-        }
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        /* About Section */
-        #about {
-            background: #fff;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .about-img {
-            flex: 1;
-            min-width: 300px;
-        }
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-        /* Books Section */
-        #books {
-            background: #f4f0eb;
-        }
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .book-item {
-            background: #fff;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .book-item:hover {
-            transform: translateY(-10px);
-        }
-        .book-item img {
-            margin-bottom: 20px;
-        }
-        .book-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
+    /* ── Header ── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(249,249,247,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
 
-        /* Blog Section */
-        #blog {
-            background: #fff;
-        }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .blog-item {
-            background: #f9f5f0;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .blog-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .blog-content {
-            padding: 20px;
-        }
-        .blog-content h3 {
-            margin-bottom: 10px;
-        }
-        .blog-content p {
-            font-size: 0.9rem;
-        }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
 
-        /* Contact Section */
-        #contact {
-            background: #f4f0eb;
-            text-align: center;
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        input, textarea {
-            padding: 15px;
-            border: 1px solid #ddd;
-            font-family: inherit;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+    .logo {
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      font-family: 'Crimson Text', serif;
+    }
 
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        .social-links {
-            margin-top: 20px;
-        }
-        .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #c9a96e;
-        }
+	.new-container {
+		margin: 0 auto; 
+	}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 3rem;
-            }
-            .nav-menu {
-                flex-direction: column;
-                background: rgba(0,0,0,0.8);
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                display: none;
-            }
-            .nav-menu.active {
-                display: flex;
-            }
-            .nav-menu li {
-                margin: 10px 0;
-            }
-        }
-    </style>
+	.new-container form {
+		margin: 0 auto;
+	}
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      letter-spacing: 0.4px;
+      color: var(--color-muted);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: var(--color-text);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(249,249,247,0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px;
+    }
+
+    .mobile-menu.show {
+      display: block;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu a {
+      font-size: 1.1rem;
+      color: var(--color-muted);
+    }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (min-width: 840px) {
+      .hero-grid {
+        grid-template-columns: 1fr 380px;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3.2rem, 8vw, 6.2rem);
+      font-weight: 700;
+      margin-bottom: 0.4em;
+      letter-spacing: -1.5px;
+    }
+
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .hero-content p {
+      font-size: 1.25rem;
+      color: var(--color-muted);
+      max-width: 520px;
+      margin: 1.8em 0 2.2em;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 6px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.92;
+      text-decoration: none;
+    }
+
+    .book-cover-wrapper {
+      position: relative;
+    }
+
+    .book-cover-wrapper::before {
+      content: "";
+      position: absolute;
+      inset: -5px -1px;
+      transform: rotate(3deg);
+      z-index: -1;
+      border-radius: 12px;
+    }
+
+    .book-cover {
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18),
+                  0 8px 20px rgba(0,0,0,0.12);
+      border-radius: 8px;
+      display: block;
+      width: 65%;
+      height: auto;
+    }
+
+    /* ── Section basics ── */
+    section {
+      padding: 100px 0;
+    }
+
+    section.bg-light {
+      background: #f2f0eb;
+    }
+
+    section.bg-accent {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    h2.section-title {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      text-align: center;
+      margin-bottom: 1em;
+      line-height: 1.1;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      margin-bottom: 0.8em;
+      font-weight: 500;
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 720px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+
+    .card {
+      background: white;
+      border: 1px solid var(--color-border);
+      padding: 32px 28px;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-color: #d0ccc4;
+    }
+
+    .card-meta {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      margin-bottom: 1.1em;
+    }
+
+    .card h3 {
+      font-size: 1.38rem;
+      margin-bottom: 0.9em;
+      line-height: 1.25;
+    }
+
+    .card p {
+      color: var(--color-muted);
+      font-size: 0.98rem;
+    }
+
+    .read-more {
+      margin-top: 1.4em;
+      color: var(--color-accent);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Quote block */
+    .big-quote {
+      font-family: 'Crimson Text', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-style: italic;
+      line-height: 1.32;
+      border-left: 5px solid var(--color-accent);
+      padding-left: 32px;
+      margin: 2em 0;
+    }
+
+    /* Centered narrow content */
+    .narrow {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 60px 0 40px;
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 0.9rem;
+    }
+
+    .social-links a {
+      color: var(--color-muted);
+      margin: 0 12px;
+      font-size: 1.4rem;
+    }
+
+    /* Scroll prompt */
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--color-muted);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+      40% { transform: translate(-50%, -12px); }
+      60% { transform: translate(-50%, -6px); }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: block; }
+      #hero { min-height: 80vh; padding-top: 100px; }
+    }
+  </style>
 </head>
 <body>
 
+<header>
+  <div class="container">
+    <div class="nav-bar">
+      <a href="#" class="logo">Rick Arellano</a>
+
+      <button class="menu-toggle" aria-label="open menu" id="menuBtn">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#courses">Cursos</a></li>
+        <li><a href="#books">Libros</a></li>
+        <li><a href="#shop">Tienda</a></li>
+		  <li><a href="https://rickarellano.work"> ENGLISH </a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="container">
+      <ul>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#courses">Cursos</a></li>
+        <li><a href="#books">Libros</a></li>
+        <li><a href="#shop">Tienda</a></li>
+		  <li><a href="https://rickarellano.work"> ENGLISH </a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">Nuevo Libro !</div>
+          <h1>Day<br><em></em>Two </em> <br></h1>
+		  <h2>A wine while thinking on Architecture:</h2><p>Conversaciones sobre arquitectura, inspiradas en la sobremesa con maestros y profesores</p>
+          <a href="https://www.amazon.com/dp/B0GXZFF3VC/" class="btn">Comprar en Amazon (US)</a>
+        </div>
+
+        <div class="book-cover-wrapper">
+          <!-- Replace with real image path -->
+          <a href="https://www.amazon.com/dp/B0GXZFF3VC/"><img src="theme/day_2_wine.png" alt="Cover image of DAY TWO book" class="book-cover"></a>
+        </div>
+      </div>
+
+      <div class="scroll-hint">↓</div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="bg-light">
+    <div class="container narrow">
+      <div class="eyebrow" style="text-align:center">From the Blog</div>
+      <h2 class="section-title">ESSAYS</h2>
+      <div class="cards">
+
+	{% for article in articles_page.object_list %}
+		  
+        <div class="card">
+          <div class="card-meta">Essays / Rick Arellano</div>
+		  <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+         <p>{{ article.summary }}</p>
+          <a href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+        </div>
+
+		  
+ 	{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Preview -->
+  <section>
+    <div class="container narrow">
+      <div class="eyebrow" style="text-align:center">La búsqueda de lo auténtico</div>
+      <h2 class="section-title">Primeras páginas</h2>
+
+      <p style="font-size:1.9rem; margin:1.5em 0; line-height:1.4; font-family:'Crimson Text',serif; font-weight:600; color:#222;">
+        El último video
+      </p>
+
+      <p>
+<span style="float:left; font-size:5rem; line-height:0.8; margin-right:0.2em; color:var(--color-accent);">M</span>“ientras veo a Bryan contener a un joven en una catarsis emocional, me vuelvo un poco más sobrio sobre el proceso. Bryan invitaba al chico a participar y practicar una versión corta del trabajo de retroalimentación con una mujer, todo en frente de una audiencia. No sé si he explicado el proceso, pero debo decir que es un trabajo de retroalimentación en cómo nos mostramos. Básicamente, una aproximación silenciosa, acercarse a una persona sin decir palabra alguna. Los chicos por todos lados se preocupan demasiado acerca de qué decir cuándo se acercan a una chica, o a un personaje reconocido. Este proceso elimina ese paso: decimos bastante sin siquiera decir algo verbalmente. Esta vez, la audiencia es más joven y bastante bien vestida, pero con más dudas y más que entregar. Luego, lo que veo en la sesión es un nivel de ternura y cuidado. Pero al mismo tiempo un lugar que Bryan ya ha visto.”</p>
+      <!-- more paragraphs -->
+
+		<p>“El nivel de ternura se muestra cuando Bryan lo sostiene mientras llora.  Con esto, recordé esta idea de los lugares que ya hemos visto. Bryan ya ha visto lágrimas en su propio proceso individual, de seguro.  Debo mencionar a James P. Carse, autor del libro Juegos Finitos y Juegos Infinitos, publicado en 1986. Carse ha sido parte de esta influencia, de esta forma de entender la experiencia. En este caso, es posible decir que es una forma de revivir el pasado, pero a la larga una experiencia no tan satisfactoria, ya que la sorpresa se elimina.  Al mismo tiempo veo la experiencia ganada, en términos del tiempo invertido en estas prácticas, y toda la producción que se requiere para diseminar estas ideas. Él se ve como un experto, aún siendo bastante joven.  Esto fue una década atrás. Fue el último video que vi y que incorporé a mi colección. Era más o menos un video difícil de encontrar, o al menos difícil de encontrar en mis búsquedas habituales. Pero, ese fue el último. Al mismo tiempo, me siento sobrio y más ligero luego de esto, pero quizás con la situación no tan bajo control.”</p>
+<p></p>
+      <blockquote class="big-quote">
+        «Decker mencionaba el hecho de que luego de un quiebre o un salto, no iba a decir nuevamente: "esto es!", ya que, afortunadamente, siempre otro quiebre o salto hacia adelante lo contradecía.»
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- You can continue adding the other sections in a similar classic style -->
+
+</main>
+
+
+<!-- Continue from where the previous code left off – insert these sections after the Extracto section -->
+
+  <!-- Amazon Discount Banner -->
+  <section style="border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border); background:#f2f0eb; padding:60px 0;">
+    <div class="container">
+      <div style="display:flex; flex-wrap:wrap; gap:40px; align-items:center; justify-content:center; text-align:center;">
+        <div style="flex:1; min-width:300px;">
+          <p style="font-size:1.05rem; margin-bottom:0.6em;">The Authentic Building Blocks – English edition</p>
+          <p style="color:var(--color-muted);">
+            <strong style="color:var(--color-text); font-weight:600;">88% descuento</strong> en versión digital en relación a la edición tapa dura.
+          </p>
+        </div>
+        <a href="https://a.co/d/00Nr69Kg" class="btn" style="background:var(--color-accent); color:white; padding:16px 40px;">Disponible on amazon.com (US)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course / Mediación -->
+  <section id="courses">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr; gap:60px; align-items:center;">
+       
+
+        <div>
+          <!-- Replace with real image -->
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80" 
+               alt="a group of people" 
+               style="width:100%; height:auto; border-radius:8px; box-shadow:0 12px 40px rgba(0,0,0,0.12);">
+        </div>
+
+        <div>
+          <div class="eyebrow">CURSO</div>
+          <h2 class="section-title" style="text-align:left;">Cómo disfrutar al máximo <br>estando en caféterias</h2> 
+          <p style="font-size:1.15rem; margin:1.5em 0;"> <em style="font-family:'Crimson Text',serif; font-style:normal; font-weight:600;">disfrutar/em>, ir a lugares públicos, pasarlo bien, <strong>mucho mas que</strong> antes, mejorar tus interacciones, en el candor del momento</p>
+          <a href="https://instagram.com/rickarellano.work" class="btn" style="background:var(--color-accent); color:white;">Sígueme en instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular / Most searched -->
+  <section id="books" style="background:#f9f9f7;">
+    <div class="container narrow">
+      <h2 class="section-title">Popular</h2>
+      <p class="eyebrow" style="text-align:center; margin-top:-1em;">Editorial</p>
+
+      <div style="margin:3em auto; max-width:680px;">
+        <a href="https://a.co/d/0idy81sy" style="display:block; padding:24px 0; border-top:1px solid var(--color-border); transition:all 0.2s; text-decoration:none;">
+          <p style="font-size:0.9rem; color:var(--color-muted); margin-bottom:0.4em;">By Rick Arellano</p>
+          <h3 style="font-size:1.4rem; margin:0; transition:color 0.2s;">Los Fragmentos del Juego – 2020</h3>
+          <p style="margin-top:0.6em; color:var(--color-muted);">El juego social</p>
+        </a>
+
+        <a href="https://a.co/d/0aeEd794" style="display:block; padding:24px 0; border-top:1px solid var(--color-border); border-bottom:1px solid var(--color-border); transition:all 0.2s; text-decoration:none;">
+          <p style="font-size:0.9rem; color:var(--color-muted); margin-bottom:0.4em;">By Rick Arellano</p>
+          <h3 style="font-size:1.4rem; margin:0; transition:color 0.2s;">Sin Prestar Atención – (novela) - 2023</h3>
+          <p style="margin-top:0.6em; color:var(--color-muted);">Una periodista quiere terminar su reportaje sobre la seducción en un campus universitario, pero requerirá la ayuda de los mismos artistas dedicados a aquello para lograrlo. Agregando comentario adicional, el reporte y ciertos registros en video se convertirán en una nueva forma de entender las tácticas sociales, una revelación que podría cambiar la política interna del campus.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="bg-accent" style="background:var(--color-accent); color:white; padding:120px 0; text-align:center;">
+    <div class="container narrow">
+      <div class="eyebrow" style="color:rgba(255,255,255,0.7);"> 1 a 1 – Coaching sessions</div>
+      <p class="eyebrow" style="margin:1em 0 2em; color:rgba(255,255,255,0.6);">Testimonials</p>
+
+      <blockquote style="font-family:'Crimson Text',serif; font-size:clamp(1.5rem,4vw,2.2rem); font-style:italic; line-height:1.45; max-width:760px; margin:0 auto 2.5em;">
+        «Lo bueno de Rick es que fijas un objetivo, y las conversaciones se dan de manera natural»
+      </blockquote>
+
+      <p style="font-weight:600; font-size:1.1rem;">Alexis C.</p>
+      <p style="color:rgba(255,255,255,0.7); font-size:0.95rem; margin-top:0.4em;">Programador, Chile</p>
+    </div>
+  </section>
+
+  <!-- Book Purchase – TFG -->
+  <section id="shop" style="padding:120px 0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr; gap:60px; align-items:center;">
+        
+
+        <div>
+          <div class="eyebrow">Compra hoy</div>
+          <h2 class="section-title" style="text-align:left;">Los fragmentos del <br>Juego</h2>
+          <p style="font-size:1.1rem; margin:1.5em 0;">Si el tema de socializar no fue automático para ti, creo que perteneces al grupo que necesita aprender tácticas, y ver el terreno antes de iniciar cualquier interacción. Mapas hay muchos, pero pocos tan certeros como el que hizo Erik von Markovik, conocido como Mystery en las redes. Pero Mystery y su método no eran infalibles. Eso me hizo identificarme con lo que enseñaba.  </p>
+          <p style="font-size:1.1rem; margin-bottom:2em;"> están los mejores trucos y perspectivas que me sirvieron en mi proceso, y que te ayudarán a lograr un mayor grado de apertura social, donde quiera que estés, si así lo deseas.</p>
+          <a href="https://a.co/d/06foSsa2" class="btn">edición para Kindle - comprar en amazon.com</a>
+        </div>
+
+        <div style="position:relative; text-align:center;">
+          <div style="position:absolute; inset:-30px; background:#e8e4db; transform:rotate(-4deg); z-index:0; border-radius:12px;"></div>
+          <!-- Replace with real cover image -->
+          <img src="theme/tfg2.png" 
+               alt="portada del libro los fragmentos del juego por rick arellano" 
+               style="position:relative; z-index:1; box-shadow:0 20px 60px 
+rgba(0,0,0,0.22); border-radius:8px; width:100%; max-width:240px; 
+height:auto;">
+          <div style="position:absolute; bottom:-16px; right:20px; background:var(--color-accent); color:white; padding:8px 16px; font-size:0.9rem; font-weight:600; border-radius:4px; box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+            USD $3.99
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer (already in previous code – you can enhance social icons if needed) -->
+
+</main>
+
+<!-- Keep the same footer and mobile menu script from before -->
+
+<footer>
 	
-     
+  <div class="container"> <p> No te vayas con las manos vacías. Sigue el camino ... </p>
 
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-container">
-            <div class="logo">Rick Arellano</div>
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#libros">Libros</a></li>
-                <li><a href="#blog">Blog</a></li>
-            
-            </ul>
-        </div>
-    </nav>
+	<div class="new-container"><script async data-uid="1bd6c5d61b" src="https://the-social-game.kit.com/1bd6c5d61b/index.js"></script></div>
 
-    <!-- Hero Header -->
-    <header id="inicio">
+	  
+    <p>© 2020–2026 Rick Arellano — Todos los derechos reservados</p>
+  </div>
+</footer>
 
-	   <div class="hero-content">
-            <h1>Rick Arellano</h1>
-            <p>Autor, guía de desarrollo personal</p>
-            <a href="#libros" class="btn">Explora los Libros</a>
-        </div>
-    </header>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>Aceeca del Autor</h2>
-            <div class="about-content">
-                <div class="about-img">
-                    <img 
-src="theme/profile_rick.jpg" alt="Rick 
-Arellano">
-                </div>
-                <div class="about-text">
-<p>Rick Arellano esta ayudando a hombres a conocer más sobre el juego interno necesario para mejorar sus actividades sociales. </p>
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+    menuBtn.textContent = mobileMenu.classList.contains('show') ? '✕' : '☰';
+  });
+</script>
 
-<p>Las historias de Rick han alcanzado cientos de lectores en Latinoamérica (Apple Books). Él ha estado en internet desde 2008, y ha sido galardonado por instituciones como Universidad del Bio-bio e INACAP. Publicado por Blucher Proceedings y Lulu Press. Actualmente vive y trabaja en un suburbio alrededor de Concepción, Chile. 
-
-rickarellano.work/
-</p>
-					
-					<a href="#blog" class="btn">Conocer más</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
- <!-- Blog Section -->
-    <section id="blog">
-        <div class="container">
-            <h2>Lo último del Blog</h2>
-            <div class="blog-grid">
-
-{% for article in articles_page.object_list %}
-
-                <div class="blog-item">
-                    
-                    <div class="blog-content">
-                        <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
-                        <p>{{ article.summary }}</p>
-                        <a href="{{ SITEURL }}/{{ article.url }}">Seguir leyendo ...</a>
-                    </div>
-                </div>
-                
-
- {% endfor %}
-           
-               
-            </div>
-        </div>
-    </section>
-
-    <!-- Books Section -->
-    <section id="libros">
-        <div class="container">
-            <h2>La colección</h2>
-            <div class="books-grid">
-                <div class="book-item">
-                    <img 
-src="theme/fdj.png" alt="Book 1">
-                    <h3>Los fragmentos del juego</h3>
-                    <p>Una breve búsqueda por el declive de las comunidades de abordar</p>
-                    <a href="https://a.co/d/iFJhQpz" 
-class="btn">Aprender más</a>
-                </div>
-                <div class="book-item">
-                    <img 
-src="theme/lba.png" alt="Book 2">
-                    <h3>La búsqueda de lo auténtico</h3>
-                    <p>Un grupo del cono sur conoce el movimiento de authentic relating de San Francisco</p>
-                    <a 
-href="https://leanpub.com/labusquedadeloautentico" 
-class="btn">Aprender más</a>
-                </div>
-                <div class="book-item">
-                    <img 
-src="theme/spa.png" alt="Book 3">
-                    <h3>Sin Prestar Atención</h3>
-                    <p>Cómo las galerías de arte se convierten en un sutil baile de seducción
-.</p>
-                    <a href="https://a.co/d/hRS5cIg" 
-class="btn">Aprender más</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rick Arellano. Todos los derechos reservados.</p>
-            <div class="social-links">
-                <a href="https://www.youtube.com/@rickarellano.fragments">YouTube</a>
-                <a href="https://www.instagram.com/rickarellano.work/">Instagram</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Simple mobile menu toggle (if needed)
-        const menu = document.querySelector('.nav-menu');
-        // For demo, assuming no burger icon; add if needed
-    </script>
-
-
-
-  </body>
+</body>
 </html>
-
