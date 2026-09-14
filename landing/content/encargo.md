@@ -1,3 +1,7 @@
+
+Title: Encargo Date: 14-09-2026 Category: Blog
+
+
 *La belleza no puede buscarse,*
 *Sólo puede ser encontrada.*
 —James P. Carse
