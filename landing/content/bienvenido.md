@@ -4,6 +4,12 @@ Category: Blog
 
 Hola, este es el nuevo sitio. Busca las formas en que puedo ayudarte. 
 
-Revisa en Github el material reciente, entrevistas y trabajos específicos.  
+Revisa en Github y Youtube el material reciente, entrevistas y trabajos específicos.  
 
-[GitHub](https://github.com/rarellanoc)	
+...
+
+ir a [GitHub](https://github.com/rarellanoc)	
+
+...
+
+ir a [Youtube](https://www.youtube.com/@RicardoArellano.architecture)
