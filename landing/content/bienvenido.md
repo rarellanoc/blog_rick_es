@@ -4,6 +4,6 @@ Category: Blog
 
 Hola, este es el nuevo sitio. Busca las formas en que puedo ayudarte. 
 
-Revisa en youtube el material reciente. 
+Revisa en Github el material reciente, entrevistas y trabajos específicos.  
 
-[YouTube](https://youtube.com/@rickarellano.fragments)	
+[GitHub](https://github.com/rarellanoc)	
