@@ -8,7 +8,7 @@ Revisa en Github y Youtube el material reciente, entrevistas y trabajos específ
 
 ...
 
-ver bio [CV](https://github.com/rarellanoc/soa_ricardoarellano)
+ver [Github](https://github.com/rarellanoc)
 
 ...
 
