@@ -4,7 +4,7 @@ Category: Blog
 Status: Hidden
 
 
-Gracias por hacer click, tu respuesta ha sido recibida. 
+Gracias por poner el esfuerzo, tu respuesta ha sido recibida. 
 
 En alrededor de una hora recibirás un correo importante. 
 
