@@ -1,5 +1,5 @@
 Title: La guía definitiva sobre retroalimentación y presencia
-Date: 27/10/26
+Date: 23-11-26
 Category: Blog
 
 Escapa de lo mundano:
